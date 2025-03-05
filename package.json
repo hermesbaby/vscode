@@ -1,0 +1,98 @@
+{
+  "name": "hermesbaby",
+  "displayName": "hermesbaby",
+  "description": "The Software and Systems Engineers' Typewriter",
+  "version": "0.0.1",
+  "publisher": "hermesbaby",
+  "author": "Alexander Mann-Wahrenberg (basejumpa) ",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hermesbaby/hermesbaby-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hermesbaby.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "extensionPack": [
+    "vscode-icons-team.vscode-icons",
+    "johnpapa.vscode-peacock",
+
+    "editorconfig.editorconfig",
+    "jeff-hykin.code-eol",
+    "oderwat.indent-rainbow",
+    "ionutvmi.path-autocomplete",
+    "shibayu36.search-in-current-file",
+
+    "alefragnani.bookmarks",
+    "gruntfuggly.todo-tree",
+
+    "mhutchie.git-graph",
+    "adam-bender.commit-message-editor",
+    "solomonkinard.git-blame",
+    "david-rickard.git-diff-and-merge-tool",
+    "scootersoftware.bcompare-vscode",
+    "ryu1kn.partial-diff",
+
+    "chrisjsewell.myst-tml-syntax",
+    "chrisjsewell.myst-lsp",
+
+    "actboy168.tasks",
+    "forbeslindesay.forbeslindesay-taskrunner",
+
+    "mushan.vscode-paste-image",
+    "hediet.vscode-drawio",
+
+    "jebbs.plantuml",
+    "bierner.markdown-mermaid",
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+    "tintinweb.graphviz-interactive-preview",
+
+    "rulyotano.tree-extended",
+
+    "danlevett.pattern-links",
+
+    "rssowl.copy-relative-path-posix",
+    "tatsuyanakamori.insertrelpath"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "vsce:package": "vsce package",
+    "vsce:publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.91.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.2",
+    "eslint": "^9.21.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
